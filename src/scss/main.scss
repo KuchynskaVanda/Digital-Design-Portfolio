@@ -1,0 +1,17 @@
+// Імпортуємо змінні та міксини
+@import 'variables';
+@import 'mixins';
+
+// Імпортуємо базові стилі
+@import 'base';
+
+// Імпортуємо стилі компонентів
+@import 'header';
+@import 'footer';
+@import 'hero';
+@import 'work';
+@import 'team';
+@import 'clients';
+@import 'contact';
+@import 'what-i-do';
+
