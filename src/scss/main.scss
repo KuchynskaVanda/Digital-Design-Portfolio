@@ -1,17 +1,17 @@
 // Імпортуємо змінні та міксини
-@import 'variables';
-@import 'mixins';
+@import 'globals/variables';
+@import 'globals/mixins';
 
 // Імпортуємо базові стилі
-@import 'base';
+@import 'globals/base';
 
 // Імпортуємо стилі компонентів
-@import 'header';
-@import 'footer';
-@import 'hero';
-@import 'work';
-@import 'team';
-@import 'clients';
-@import 'contact';
-@import 'what-i-do';
+@import 'blocks/header';
+@import 'blocks/footer';
+@import 'blocks/hero';
+@import 'blocks/work';
+@import 'blocks/team';
+@import 'blocks/clients';
+@import 'blocks/contact';
+@import 'blocks/what-i-do';
 
