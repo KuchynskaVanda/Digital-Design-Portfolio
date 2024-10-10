@@ -39,3 +39,19 @@ a {
     max-width: 100%
   }
 }
+
+.button {
+  padding: 15.5px 30px;
+  border-radius: 50px;
+
+  &--black {
+    background-color: $color-primary;
+    color: $color-white;
+  }
+
+  &--white {
+    background-color: $color-white;
+    color: $color-primary;
+  }
+}
+
