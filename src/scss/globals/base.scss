@@ -1,0 +1,41 @@
+
+* {
+  box-sizing: border-box;
+}
+
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+
+}
+
+.container {
+  max-width: $container-width-base;
+  margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  @media screen and (max-width: $ui-breakpoints-xxl) {
+    max-width: $container-width-xl;
+  }
+
+  @media screen and (max-width: $ui-breakpoints-xl) {
+    max-width: $container-width-lg;
+  }
+
+  @media screen and (max-width: $ui-breakpoints-lg) {
+    max-width: $container-width-md;
+  }
+  @media screen and (max-width: $ui-breakpoints-md) {
+    max-width: $container-width-sm;
+  }
+
+  @media screen and (max-width: $ui-breakpoints-sm) {
+    max-width: 100%
+  }
+}
