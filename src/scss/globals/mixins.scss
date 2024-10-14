@@ -1,0 +1,8 @@
+
+@mixin social-img($size, $bg-color) {
+  height: $size;
+  width: $size;
+  object-fit: contain;
+  object-position: center;
+
+}
