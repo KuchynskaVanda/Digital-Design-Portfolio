@@ -1,0 +1,80 @@
+//.item {
+//  @include social-img(50px, yellow)
+//}
+
+.what-i-do {
+  display: grid;
+  grid-template: 1fr / 1fr 1fr;
+  gap: 40px;
+  border-bottom: 1px solid $color-primary;
+  @media screen and (max-width: $ui-breakpoints-xl) {
+    grid-template: 1fr 1fr / 1fr;
+  }
+
+  @media screen and (max-width: $ui-breakpoints-md) {
+    grid-template: 1fr 2fr / 1fr;
+  }
+
+
+}
+
+.what-i-do__img {
+  height: 100%;
+  background-image: url("../images/what-i-do-bgd.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.what-i-do__content {
+
+  padding: 70px;
+  background-color: $background-main;
+  @media screen and (max-width: $ui-breakpoints-xl) {
+    padding: 40px 30px;
+  }
+
+  @media screen and (max-width: $ui-breakpoints-md) {
+    padding: 20px;
+  }
+}
+
+.what-i-do__title {
+  font-size: 150px;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.what-i-do__skills {
+  counter-reset: skill_card-counter;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.skill_card__title {
+  font-family: $font-main;
+  font-size: 44px;
+  font-weight: 600;
+  line-height: 48px;
+}
+
+.skill_card__title::before {
+  content: counter(skill_card-counter) ;
+  counter-increment: skill_card-counter;
+  display: inline-block;
+  width: fit-content;
+  height: 1px;
+  font-weight: 300;
+}
+
+.skill_card__subtitle {
+  font-family: $font-secondary;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 400;
+}
+
+.skill_card:not(:last-child) {
+  padding-bottom: 40px;
+  border-bottom: solid 1px $color-primary;
+}
