@@ -1,0 +1,42 @@
+.footer {
+  padding: 25px 0;
+}
+
+.footer__content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+
+  @media screen and (max-width: $ui-breakpoints-md) {
+    flex-direction: column;
+  }
+}
+
+.footer__copyrights {
+  font-family: $font-main;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.2;
+
+  span {
+    font-weight: 600;
+  }
+}
+
+.footer__socials {
+  display: flex;
+  gap: 10px;
+}
+
+.footer__socials-item {
+  height: 30px;
+  width: 30px;
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
+  }
+}
