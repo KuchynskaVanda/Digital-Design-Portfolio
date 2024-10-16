@@ -1,0 +1,89 @@
+.contact {
+  padding: 50px 0;
+  font-family: $font-main;
+  border-bottom: 1px solid $color-primary;
+
+  @media screen and (max-width: $ui-breakpoints-xl) {
+    padding: 30px 0 50px;
+  }
+
+
+}
+
+.contact__content-wrapper {
+  display: flex;
+  padding-top: 50px;
+  gap: 40px;
+
+  & > * {
+    flex-basis: 50%;
+  }
+
+
+  @media screen and (max-width: $ui-breakpoints-xl) {
+    flex-direction: column;
+    align-items: center;
+
+    & > * {
+      flex-basis: auto;
+    }
+  }
+}
+
+.contact__title {
+  font-size: 155px;
+  font-weight: 300;
+  line-height: 1.1;
+
+  @media screen and (max-width: $ui-breakpoints-xl) {
+    font-size: 150px;
+    text-align: center;
+  }
+
+  @media screen and (max-width: $ui-breakpoints-md) {
+    font-size: 80px;
+  }
+}
+
+.contact__content {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 30px;
+
+  @media screen and (max-width: $ui-breakpoints-xl) {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.contact__slogan {
+  font-weight: 700;
+  font-size: 64px;
+  color: $font-main;
+
+  @media screen and (max-width: $ui-breakpoints-md) {
+    font-size: 50px;
+  }
+}
+
+.contact__question {
+  font-weight: 500;
+  font-size: 34px;
+  color: $font-main;
+  line-height: 1.15;
+
+  @media screen and (max-width: $ui-breakpoints-md) {
+    font-size: 30px;
+  }
+}
+
+.contact__button {
+  font-weight: 500;
+  font-size: 18px;
+  color: $color-white;
+  line-height: 1.15;
+  @media screen and (max-width: $ui-breakpoints-md) {
+    width: 100%;
+  }
+}
