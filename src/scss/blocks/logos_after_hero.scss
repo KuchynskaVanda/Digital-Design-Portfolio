@@ -1,0 +1,59 @@
+@import '../globals/variables';
+
+.logos {
+  background-color: #f5f3e8;
+  padding: 20px 0;
+
+  .logos__wrapper {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    justify-items: center;
+    gap: 20px;
+  }
+
+  .logo-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 70px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 50px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+
+    img {
+      max-width: 100px;
+      height: auto;
+      object-fit: contain;
+    }
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  @media screen and (max-width: $ui-breakpoints-xl) {
+    .logos__wrapper {
+      grid-template-columns: repeat(5, 1fr);
+    }
+  }
+
+  @media screen and (max-width: $ui-breakpoints-md) {
+    .logos__wrapper {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .logo-item {
+      width: 150px;
+      height: 60px;
+    }
+  }
+
+}
+
+
+
+
+

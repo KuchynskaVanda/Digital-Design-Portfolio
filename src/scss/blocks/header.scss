@@ -1,0 +1,189 @@
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../../fonts/gilroy/Gilroy-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+.header {
+  background-color: #f5f3e8;
+  padding: 20px 0;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1780px;
+    margin: 0 auto;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+
+    .logo-text {
+      display: flex;
+      align-items: baseline;
+      margin-left: 10px; // Відступ між іконкою та текстом
+
+      &__bold {
+        font-family: 'Gilroy', sans-serif;
+        font-weight: 800;
+        font-size: 35px;
+        color: #000;
+      }
+
+      &__medium {
+        font-family: 'Gilroy', sans-serif;
+        font-weight: 500;
+        font-size: 35px;
+        color: #000000;
+        margin-left: 5px; // Відступ між "Dianne" та "STUDIO"
+      }
+
+      &__trademark {
+        font-size: 25px; // Розмір символу ®
+        vertical-align: super; // Піднімаємо до рівня верхнього індексу
+        margin-left: 2px; // Малий відступ між "STUDIO" і "®"
+      }
+    }
+  }
+
+  &__menu {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 25px;
+    color: #252525;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+  }
+}
+
+// Адаптація для мобільних пристроїв (320px)
+@media screen and (max-width: 320px) {
+  .header {
+    padding: 10px 0;
+
+    .container {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    &__logo {
+      .logo-text__bold,
+      .logo-text__medium,
+      .logo-text__trademark {
+        display: none; // Приховуємо текст логотипу
+      }
+
+      svg {
+        width: 50px; // Зменшений розмір лого для 320px
+      }
+    }
+
+    &__menu {
+      font-size: 16px;
+    }
+  }
+}
+
+// Адаптація для мобільних пристроїв (до 768px)
+@media screen and (max-width: 768px) {
+  .header {
+    padding: 15px 0;
+
+    .container {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    &__logo {
+      .logo-text__bold,
+      .logo-text__medium,
+      .logo-text__trademark {
+        display: none; // Приховуємо текст логотипу
+      }
+    }
+
+    &__menu {
+      font-size: 18px;
+    }
+  }
+}
+
+// Адаптація для планшетів (768px - 1200px)
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .header {
+    padding: 18px 0;
+
+    .container {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+    &__logo {
+      .logo-text__bold {
+        font-size: 30px;
+      }
+
+      .logo-text__medium {
+        font-size: 30px;
+      }
+
+      .logo-text__trademark {
+        font-size: 20px;
+      }
+    }
+
+    &__menu {
+      font-size: 22px;
+    }
+  }
+}
+
+// Адаптація для десктопів (від 1200px)
+@media screen and (min-width: 1200px) {
+  .header {
+    padding: 20px 0;
+
+    .container {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+
+    &__logo {
+      .logo-text__bold {
+        font-size: 35px;
+      }
+
+      .logo-text__medium {
+        font-size: 35px;
+      }
+
+      .logo-text__trademark {
+        font-size: 25px;
+      }
+    }
+
+    &__menu {
+      font-size: 25px;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
