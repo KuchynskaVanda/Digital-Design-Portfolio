@@ -36,18 +36,31 @@
 
   @media screen and (max-width: $ui-breakpoints-xl) {
     .logos__wrapper {
-      grid-template-columns: repeat(5, 1fr);
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
     }
   }
 
   @media screen and (max-width: $ui-breakpoints-md) {
-    .logos__wrapper {
-      grid-template-columns: repeat(3, 1fr);
+    .logos__grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 20px;
+      justify-content: center;
     }
 
-    .logo-item {
-      width: 150px;
-      height: 60px;
+    .logos__item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      border-radius: 50px;
+      background-color: #fff;
+    }
+
+    .logos__image {
+      width: 100px;
+      height: auto;
     }
   }
 

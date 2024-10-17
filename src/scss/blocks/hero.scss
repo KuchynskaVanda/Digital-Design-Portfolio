@@ -1,16 +1,9 @@
 @import '../globals/variables';
 
 
-@font-face {
-  font-family: 'Gilroy';
-  src: url('../../fonts/gilroy/Gilroy-SemiBold.ttf') format('truetype');
-  font-weight: 600; /* SemiBold */
-  font-style: normal;
-}
-
 .hero {
   width: 100%;
-  background-color: #f5f3e8;
+  background-color: $color-background;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -33,19 +26,19 @@
     text-align: center;
 
     .hero__name {
-      font-family: 'Gilroy', sans-serif;
+      font-family: $font-main;
       font-size: 150px;
       font-weight: 600; /* SemiBold */
       line-height: 175.78px;
-      color: #252525;
+      color: $color-primary;
     }
 
     .hero__subtitle {
-      font-family: 'Gilroy', sans-serif;
+      font-family: $font-main;
       font-weight: 300;
       font-size: 150px;
       line-height: 172.95px;
-      color: #252525;
+      color: $color-primary;
     }
   }
 
@@ -66,7 +59,7 @@
 
     svg {
       path {
-        stroke: #252525;
+        stroke: $color-primary;
         stroke-width: 2;
         stroke-linecap: square;
         stroke-linejoin: round;
@@ -93,15 +86,14 @@
     gap: 10px;
     width: 100%;
     box-sizing: border-box;
-    max-height: 404px;
     order: 1;
 
     .hero__description-text {
-      font-family: 'Gilroy', sans-serif;
+      font-family: $font-main;
       font-weight: 300;
-      font-size: 48px;
-      line-height: 71.49px;
-      color: #252525;
+      font-size: 46px;
+      line-height: 58px;
+      color: $color-primary;
       margin: 0 20px;
 
       span {
@@ -110,7 +102,7 @@
     }
 
     .hero__social {
-      background-color: #252525;
+      background-color: $color-primary;
       padding: 30px;
       border-radius: 10px;
       text-align: right;
@@ -123,10 +115,10 @@
       height: auto;
 
       .hero__social-title {
-        font-family: 'Gilroy', sans-serif;
+        font-family: $font-main;
         font-size: 32px;
         font-weight: 600;
-        color: #fff;
+        color: $color-white;
         margin-bottom: 20px;
         align-self: flex-end;
       }
@@ -142,11 +134,11 @@
           height: 40px;
 
           svg {
-            fill: #fff;
+            fill: $color-white;
           }
 
           &:hover {
-            fill: #f5f3e8;
+            fill: $color-background;
           }
         }
       }
@@ -168,12 +160,12 @@
 
   @media screen and (max-width: $ui-breakpoints-md) {
     .hero__name {
-      font-size: 85px;
+      font-size: 55px;
       line-height: 1.2;
     }
 
     .hero__subtitle {
-      font-size: 83px;
+      font-size: 55px;
       line-height: 1.2;
     }
 
@@ -193,8 +185,8 @@
     .hero__description-text {
       font-size: 44px;
       line-height: 1.4;
-      max-width: 500px; /* Обмеження ширини текстового контейнера */
-      margin: 0 auto; /* Центруємо блок тексту */
+      max-width: 500px;
+      margin: 0 auto;
     }
 
     span {
@@ -207,22 +199,22 @@
       padding: 20px;
       margin-top: 30px;
       border-radius: 0;
-      background-color: #252525;
+      background-color: $color-primary;
       display: flex;
       flex-direction: column;
-      align-items: flex-end; /* Вирівнюємо вміст по правій стороні */
+      align-items: flex-end;
     }
 
     .hero__social-title {
-      color: #fff;
+      color: $color-white;
       margin-bottom: 15px;
-      text-align: right; /* Вирівнюємо заголовок по правій стороні */
+      text-align: right;
     }
 
     .hero__social-icons {
       display: flex;
       gap: 20px;
-      justify-content: flex-end; /* Вирівнюємо іконки по правій стороні */
+      justify-content: flex-end;
       margin-top: 10px;
     }
 
@@ -232,15 +224,13 @@
       height: 40px;
 
       svg {
-        fill: #fff;
+        fill: $color-white;
       }
 
       &:hover {
-        fill: #f5f3e8;
+        fill: $color-background;
       }
     }
   }
-
-
 
 }

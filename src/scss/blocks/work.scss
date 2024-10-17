@@ -1,0 +1,145 @@
+@import '../globals/variables';
+
+.selected-work {
+  padding: 50px 0;
+  background-color: $color-background;
+
+  &__title {
+    font-family: $font-main;
+    font-weight: 200;
+    font-size: 192px;
+    text-align: center;
+    margin-bottom: 40px;
+    color: $color-black;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 10px;
+    position: relative;
+
+    .selected-work__image {
+      width: 100%;
+      height: auto;
+    }
+
+    .selected-work__name {
+      font-family: $font-main;
+      font-weight: 600;
+      font-size: 40px;
+      margin-bottom: 10px;
+      color: $color-black;
+    }
+
+    .selected-work__tags {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      align-items: center;
+      justify-content: flex-start;
+
+      .selected-work__tag,
+      .selected-work__year {
+        display: inline-block;
+        background-color: $color-white;
+        border-radius: 20px;
+        padding: 5px 15px;
+        font-size: 14px;
+        font-weight: 500;
+        color: $color-primary;
+      }
+    }
+
+    .selected-work__button {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      padding: 10px 20px;
+      background-color: $color-black;
+      color: $color-white;
+      font-size: 16px;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #444;
+      }
+    }
+  }
+
+  &__all-work-container {
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  .selected-work__button--all {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: $color-black;
+    color: $color-white;
+    font-size: 16px;
+    border-radius: 50px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #444;
+    }
+  }
+}
+
+/* Responsive Design */
+
+/* Tablet View (1 колонка) */
+@media screen and (max-width: $ui-breakpoints-xl) {
+  .selected-work__grid {
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+  }
+
+  .selected-work__title {
+    font-size: 72px;
+  }
+
+  .selected-work__item {
+    padding: 15px;
+
+    .selected-work__button {
+      bottom: 10px;
+      right: 10px;
+    }
+  }
+}
+
+/* Mobile View (1 колонка) */
+@media screen and (max-width: $ui-breakpoints-md) {
+  .selected-work__grid {
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+  }
+
+  .selected-work__title {
+    font-size: 48px;
+  }
+
+  .selected-work__item {
+    padding: 15px;
+
+    .selected-work__button {
+      bottom: 10px;
+      right: 10px;
+    }
+  }
+}
+

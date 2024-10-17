@@ -1,12 +1,7 @@
-@font-face {
-  font-family: 'Gilroy';
-  src: url('../../fonts/gilroy/Gilroy-SemiBold.ttf') format('truetype');
-  font-weight: 600;
-  font-style: normal;
-}
+@import '../globals/variables';
 
 .header {
-  background-color: #f5f3e8;
+  background-color: $color-background;
   padding: 20px 0;
 
   .container {
@@ -26,35 +21,35 @@
     .logo-text {
       display: flex;
       align-items: baseline;
-      margin-left: 10px; // Відступ між іконкою та текстом
+      margin-left: 10px;
 
       &__bold {
-        font-family: 'Gilroy', sans-serif;
+        font-family: $font-main;
         font-weight: 800;
         font-size: 35px;
-        color: #000;
+        color: $color-black;
       }
 
       &__medium {
-        font-family: 'Gilroy', sans-serif;
+        font-family: $font-main;
         font-weight: 500;
         font-size: 35px;
-        color: #000000;
-        margin-left: 5px; // Відступ між "Dianne" та "STUDIO"
+        color: $color-black;
+        margin-left: 5px;
       }
 
       &__trademark {
-        font-size: 25px; // Розмір символу ®
+        font-size: 25px;
         vertical-align: super; // Піднімаємо до рівня верхнього індексу
-        margin-left: 2px; // Малий відступ між "STUDIO" і "®"
+        margin-left: 2px;
       }
     }
   }
 
   &__menu {
-    font-family: 'Gilroy', sans-serif;
+    font-family: $font-main;
     font-size: 25px;
-    color: #252525;
+    color: $color-primary;
     background: none;
     border: none;
     cursor: pointer;
@@ -62,36 +57,7 @@
   }
 }
 
-// Адаптація для мобільних пристроїв (320px)
-@media screen and (max-width: 320px) {
-  .header {
-    padding: 10px 0;
-
-    .container {
-      padding-left: 10px;
-      padding-right: 10px;
-    }
-
-    &__logo {
-      .logo-text__bold,
-      .logo-text__medium,
-      .logo-text__trademark {
-        display: none; // Приховуємо текст логотипу
-      }
-
-      svg {
-        width: 50px; // Зменшений розмір лого для 320px
-      }
-    }
-
-    &__menu {
-      font-size: 16px;
-    }
-  }
-}
-
-// Адаптація для мобільних пристроїв (до 768px)
-@media screen and (max-width: 768px) {
+@media screen and (max-width: $ui-breakpoints-md) {
   .header {
     padding: 15px 0;
 
@@ -114,8 +80,7 @@
   }
 }
 
-// Адаптація для планшетів (768px - 1200px)
-@media screen and (min-width: 768px) and (max-width: 1200px) {
+@media screen and (max-width: $ui-breakpoints-xl) {
   .header {
     padding: 18px 0;
 
@@ -143,38 +108,6 @@
     }
   }
 }
-
-// Адаптація для десктопів (від 1200px)
-@media screen and (min-width: 1200px) {
-  .header {
-    padding: 20px 0;
-
-    .container {
-      padding-left: 40px;
-      padding-right: 40px;
-    }
-
-    &__logo {
-      .logo-text__bold {
-        font-size: 35px;
-      }
-
-      .logo-text__medium {
-        font-size: 35px;
-      }
-
-      .logo-text__trademark {
-        font-size: 25px;
-      }
-    }
-
-    &__menu {
-      font-size: 25px;
-    }
-  }
-}
-
-
 
 
 
