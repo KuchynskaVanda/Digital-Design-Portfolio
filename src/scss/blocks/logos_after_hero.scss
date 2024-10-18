@@ -3,6 +3,8 @@
 .logos {
   background-color: #f5f3e8;
   padding: 20px 0;
+  border-top: 1px solid $color-primary;
+  border-bottom: 1px solid $color-primary;
 
   .logos__wrapper {
     display: grid;
