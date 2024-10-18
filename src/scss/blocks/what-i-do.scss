@@ -26,16 +26,10 @@
 
   padding: 70px;
   background-color: $background-main;
-  //@media screen and (max-width: $ui-breakpoints-xl) {
-  //  padding: 40px 30px;
-  //}
-  //
-  //@media screen and (max-width: $ui-breakpoints-md) {
-  //  padding: 20px;
-  //}
 
   @media screen and (max-width: $ui-breakpoints-xl) {
     max-width: $container-width-lg;
+    padding: 40px 10px 10px;
     margin: 0 auto;
   }
 
@@ -44,6 +38,7 @@
   }
   @media screen and (max-width: $ui-breakpoints-md) {
     max-width: $container-width-sm;
+    padding-top: 20px;
   }
 
   @media screen and (max-width: $ui-breakpoints-sm) {
@@ -89,7 +84,10 @@
   font-weight: 400;
 }
 
-.skill_card:not(:last-child) {
+.skill_card {
   padding-bottom: 40px;
+}
+
+.skill_card:not(:last-child) {
   border-bottom: solid 1px $color-primary;
 }
