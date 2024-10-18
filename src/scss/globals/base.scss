@@ -3,6 +3,9 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: $background-main;
+}
 
 button {
   cursor: pointer;
@@ -40,18 +43,35 @@ a {
   }
 }
 
-.button {
+.button--black {
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  justify-content: center;
   padding: 15.5px 30px;
   border-radius: 50px;
+  background-color: $color-primary;
+  color: $color-white;
 
-  &--black {
-    background-color: $color-primary;
-    color: $color-white;
+  &:after {
+    content: '';
+    display: inline-block;
+    background-image: url("../images/icons/btn-arrow--right.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 30px;
+    width: 21px;
+    margin-left: 10px;
   }
+}
 
-  &--white {
-    background-color: $color-white;
-    color: $color-primary;
-  }
+.button--white {
+  display: inline-block;
+  padding: 15.5px 30px;
+  border-radius: 50px;
+  background-color: $color-white;
+  color: $color-primary;
+
 }
 

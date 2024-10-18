@@ -1,0 +1,135 @@
+.clients {
+  padding: 50px 0;
+  border-bottom: 1px solid $color-primary;
+
+  @media screen and (max-width: $ui-breakpoints-xl) {
+    padding: 30px 0;
+  }
+
+}
+
+.clients__title {
+  font-family: $font-main;
+  font-weight: 300;
+  font-size: 212px;
+  line-height: 1.15;
+  text-align: center;
+
+
+  @media screen and (max-width: $ui-breakpoints-xl) {
+    font-size: 150px;
+  }
+
+  @media screen and (max-width: $ui-breakpoints-md) {
+    font-size: 80px;
+  }
+}
+
+.clients__card-wrapper {
+  padding: 50px 0 80px;
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+
+  @media screen and (max-width: $ui-breakpoints-xl) {
+    grid-template: none;
+    padding: 0;
+  }
+}
+
+.clients-card {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 30px;
+  padding: 30px;
+
+  @media screen and (max-width: $ui-breakpoints-xl) {
+    padding: 40px 0;
+  }
+
+
+}
+@media screen and (max-width: $ui-breakpoints-xl) {
+  .clients-card:not(:last-child) {
+    border-bottom: solid 1px $color-primary;
+  }
+}
+
+
+@media screen and (min-width: $ui-breakpoints-xl--min) {
+
+  .clients-card:not(:nth-child(3n)) {
+    border-right: solid 1px $color-primary;
+  }
+
+  .clients-card:not(:nth-last-child(-n + 3)) {
+    border-bottom: solid 1px $color-primary;
+  }
+}
+
+
+.clients-card__logo {
+  height: 35px;
+  object-position: center;
+  object-fit: contain;
+}
+
+.clients-card__title {
+  font-family: $font-main;
+  font-weight: 800;
+  font-size: 30px;
+  line-height: 1.1;
+  color: $color-secondary;
+
+  @media screen and (max-width: $ui-breakpoints-xl) {
+    font-size: 40px;
+  }
+}
+
+.clients-card__description {
+  font-family: $font-secondary;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+  flex-grow: 1;
+
+  @media screen and (max-width: $ui-breakpoints-xl) {
+    font-size: 20px;
+  }
+}
+
+.clients-card__client-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 20px;
+}
+
+.clients-card__client__img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.clients-card__name {
+  font-family: $font-secondary;
+  font-weight: 600;
+  font-size: 18px;
+
+  @media screen and (max-width: $ui-breakpoints-xl) {
+    font-size: 20px;
+  }
+}
+
+.clients-card__position {
+  font-family: $font-secondary;
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 400;
+
+  @media screen and (max-width: $ui-breakpoints-xl) {
+    font-size: 20px;
+  }
+}

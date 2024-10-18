@@ -9,8 +9,10 @@ $color-white: #FFFFFF;
 $color-primary: #252525;
 $color-secondary: #333333;
 
+/* base */
+$background-main: #F5F3EA;
 
-//container width
+/* container width */
 $container-width-base: 1320px;
 $container-width-xl: 1140px;
 $container-width-lg: 960px;
@@ -18,6 +20,8 @@ $container-width-md: 720px;
 $container-width-sm: 540px;
 
 /* breakpoints */
+
+
 
 $ui-breakpoints-xxl: '1400px';
 $ui-breakpoints-xxl--min: '1401px';
