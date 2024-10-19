@@ -4,6 +4,7 @@
   grid-template: 1fr / 1fr 1fr;
   gap: 40px;
   border-bottom: 1px solid $color-primary;
+
   @media screen and (max-width: $ui-breakpoints-xl) {
     grid-template: 1fr 1fr / 1fr;
   }
@@ -48,10 +49,23 @@
 
 .what-i-do__title {
   font-family: $font-main;
+  font-weight: 300;
   text-transform: uppercase;
   font-size: 120px;
   text-align: center;
   margin-bottom: 100px;
+
+  @media screen and (max-width: $ui-breakpoints-xl) {
+    font-size: 110px;
+  }
+
+  @media screen and (max-width: $ui-breakpoints-lg) {
+    font-size: 100px;
+  }
+  @media screen and (max-width: $ui-breakpoints-md) {
+    font-size: 80px;
+  }
+
 }
 
 .what-i-do__skills {
@@ -69,7 +83,7 @@
 }
 
 .skill_card__title::before {
-  content: "0" counter(skill_card-counter);
+  content: counter(skill_card-counter, decimal-leading-zero);
   counter-increment: skill_card-counter;
   display: inline-block;
   width: fit-content;

@@ -14,21 +14,42 @@
     text-align: center;
 
     .hero__name {
-      font-family: $font-main;
-      font-size: 150px;
       font-weight: 600; // SemiBold
-      line-height: 175.78px;
       color: $color-primary;
     }
 
     .hero__subtitle {
-      font-family: $font-main;
       font-weight: 300;
-      font-size: 150px;
-      line-height: 172.95px;
-      color: $color-primary;
     }
   }
+  .hero__name, .hero__subtitle {
+    font-family: $font-main;
+    line-height: 1.15;
+    font-size: 150px;
+    color: $color-primary;
+
+
+    @media screen and (max-width: $ui-breakpoints-xxl) {
+      font-size: 120px;
+    }
+
+    @media screen and (max-width: $ui-breakpoints-xl) {
+      font-size: 110px;
+    }
+
+    @media screen and (max-width: $ui-breakpoints-lg) {
+      font-size: 100px;
+    }
+    @media screen and (max-width: $ui-breakpoints-md) {
+      font-size: 72px;
+    }
+
+    @media screen and (max-width: $ui-breakpoints-sm) {
+      font-size: 50px;
+    }
+  }
+
+
 
   &__image {
     width: 100%;
