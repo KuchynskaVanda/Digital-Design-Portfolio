@@ -1,17 +1,19 @@
 @import '../globals/variables';
 
 .logos {
-  background-color: #f5f3e8;
+  background-color: $color-background;
   padding: 70px 0;
   border-bottom: 1px solid $color-primary;
   border-top: 1px solid $color-primary;
 
   @media screen and (max-width: $ui-breakpoints-xl) {
-    padding: 40px;
+    padding: 30px;
+    border-top: none;
   }
 
   @media screen and (max-width: $ui-breakpoints-md) {
     padding: 30px;
+    border-bottom: none;
   }
 
   .logos__wrapper {
@@ -29,7 +31,7 @@
     justify-content: center;
     align-items: center;
     height: 65px;
-    background-color: #fff;
+    background-color: $color-white;
     border-radius: 50px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
