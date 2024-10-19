@@ -1,0 +1,29 @@
+image: node:18
+
+stages:
+  - build
+  - deploy
+
+before_script:
+  - npm install -g gulp-cli
+
+build:
+  stage: build
+  script:
+    - npm install
+    - npm run build
+  artifacts:
+    paths:
+      - dist/
+    expire_in: 1 week
+
+pages:
+  stage: deploy
+  script:
+    - mkdir public
+    - cp -r dist/* public/
+  artifacts:
+    paths:
+      - public
+  only:
+    - main

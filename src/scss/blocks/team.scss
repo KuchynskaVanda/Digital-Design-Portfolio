@@ -10,7 +10,7 @@
 .team__title {
   text-transform: uppercase;
   font-family: $font-main;
-  font-size: 212px;
+  font-size: 170px;
   font-weight: 300;
   text-align: center;
   padding-bottom: 50px;
@@ -19,6 +19,10 @@
     font-size: 150px;
   }
 
+
+  @media screen and (max-width: $ui-breakpoints-lg) {
+    font-size: 120px;
+  }
   @media screen and (max-width: $ui-breakpoints-md) {
     font-size: 80px;
   }

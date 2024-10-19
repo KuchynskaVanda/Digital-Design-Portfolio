@@ -11,15 +11,17 @@
 .clients__title {
   font-family: $font-main;
   font-weight: 300;
-  font-size: 212px;
+  font-size: 170px;
   line-height: 1.15;
   text-align: center;
-
 
   @media screen and (max-width: $ui-breakpoints-xl) {
     font-size: 150px;
   }
 
+  @media screen and (max-width: $ui-breakpoints-lg) {
+    font-size: 120px;
+  }
   @media screen and (max-width: $ui-breakpoints-md) {
     font-size: 80px;
   }

@@ -35,11 +35,14 @@
   font-weight: 300;
   line-height: 1.1;
 
+
   @media screen and (max-width: $ui-breakpoints-xl) {
     font-size: 150px;
-    text-align: center;
   }
 
+  @media screen and (max-width: $ui-breakpoints-lg) {
+    font-size: 120px;
+  }
   @media screen and (max-width: $ui-breakpoints-md) {
     font-size: 80px;
   }
